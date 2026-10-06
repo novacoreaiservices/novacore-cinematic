@@ -14,14 +14,16 @@ Cinematic preview of the first Sogni World place. The still is the operations ha
 
 ## Billing
 
-Renders, when approved, pay in SOGNI tokens and prefer worker NFTs 462 and 463.
+Spark is not used. This project pays in SOGNI tokens only, prefers worker NFTs 462 and 463, and stops at 5000 SOGNI.
 
 ```
-SOGNI_TOKEN_TYPE=sogni
 SOGNI_BILLING_MODE=tokens
+SOGNI_TOKEN_TYPE=sogni
+SOGNI_MAX_SOGNI=5000
+SOGNI_PREFERRED_WORKERS=462,463
 ```
 
-Preferred workers: `462,463`.
+The key is never committed. It lives only in `~/.config/sogni/credentials`.
 
 ## Not spent yet
 
