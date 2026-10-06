@@ -1,27 +1,26 @@
 # Daily Feature Roadmap
 
-Small, shippable features — one per day. Check off as they land.
+The hall still is the starting point. One shippable change a day. Do not edit `assets/img/hall.jpg`.
 
-## Week 1 — Atmosphere
-- [ ] Day 2: Preloader with NOVACORE logo reveal before the letterbox roll
-- [ ] Day 3: Ambient audio toggle (subtle synth hum, WebAudio-generated, no files)
-- [ ] Day 4: Custom cursor glow that follows the pointer in the hero
-- [ ] Day 5: Marquee ticker strip with live-ish network stats
-- [ ] Day 6: "Enter the core" button → fullscreen cinematic mode (hides nav)
+## Now — World
 
-## Week 2 — Data
-- [ ] Day 7: Fleet status cards wired to live data (Sogni API / local JSON)
-- [ ] Day 8: Earnings chart section (canvas sparkline from `data/earnings.json`)
-- [ ] Day 9: SOGNI price ticker in the nav
-- [ ] Day 10: Pool-rate / payout explainer section with animated diagram
+- [x] Day 1: Ingest the hall still and publish the clickable preview
+- [ ] Day 2: Approve the plan, then run `node world select` and check the SAM 3 outlines
+- [ ] Day 3: Quote, then canary render (loop + mark) on workers 462 and 463, SOGNI tokens
+- [ ] Day 4: Review page — approve or reject the canary. No verdicts written by the agent
+- [ ] Day 5: Ambient room hum toggle (WebAudio, no music file) under the living still
+- [ ] Day 6: Second photograph becomes place 02, and one object in the hall becomes a crossing
 
-## Week 3 — Story
-- [ ] Day 11: Timeline section — Novacore's story (Aug 2026 → today)
-- [ ] Day 12: Sogni Worlds gallery section (embed worlds.sogni.ai previews)
-- [ ] Day 13: Contact / hire-the-fleet section with form
-- [ ] Day 14: SEO + social cards + performance pass (Lighthouse 95+)
+## Then — Site
 
-## Someday
-- [ ] Light/dark "day shift / night shift" theme toggle
-- [ ] WebGL particle field behind the hero (keep it optional & cheap)
-- [ ] Multi-page: /fleet, /earnings, /worlds
+- [ ] Preloader that reveals the mark before the letterbox opens
+- [ ] Fleet status for workers 462 and 463 from local JSON
+- [ ] Earnings sparkline from `data/earnings.json`
+- [ ] SOGNI price in the dock
+- [ ] Timeline of the hall, August 2026 to today
+
+## Hold
+
+- Do not invent people, dialogue, or a second room
+- Do not replace the still with a video frame
+- Music stays off the films until a track is planned in `world.yaml`

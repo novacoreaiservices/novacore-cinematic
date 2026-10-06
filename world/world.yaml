@@ -1,0 +1,114 @@
+# The plan for one Sogni World. Filled from the ingested hall still.
+# Reference: docs/world-yaml.md   Craft rules: docs/directing-films.md
+
+id: novacore
+title: "Novacore"
+subtitle: "The hall is already awake"
+story: >
+  A single square photograph of an empty operations hall. Cyan and magenta
+  monitors line both walls, a white geometric mark and the word "NOVACORE"
+  sit on the far wall, and the aisle holds a cold floor glow. The room is
+  unoccupied. Every click is a moment that starts and ends on this still.
+  Later places are added only when a new photograph arrives.
+
+order: linear
+start: "hall"
+canvas: "992x992"
+contentFilter: off
+voices: {}
+music:
+  prompt: "Low analog synth drone, soft digital ticks, a slow sub pulse, instrumental, loops cleanly under a machine hall"
+  seconds: 90
+
+places:
+  - id: hall
+    photo: photos/01-hall.jpg
+    still: stills/hall.jpg
+    title: The Hall
+    chapter: "Place 01 · Core"
+    caption: "The fleet is already awake."
+    seen: >
+      A square, eye-level view straight down a dark symmetrical operations hall.
+      Two rows of black desks and empty chairs face the aisle. Each desk has a
+      keyboard and a monitor washed in cyan and magenta. Both side walls are
+      banks of tall screens showing circuit-like diagrams. The ceiling is a grid
+      of dark panels with a few loose cables. On the far wall a white geometric
+      mark, a hexagon outline around an inverted gem, glows above the capital
+      letters "NOVACORE". The floor is large dark tiles with a cyan reflection
+      running down the centre. The chairs are empty.
+    loop:
+      frames: 192
+      idea: "The screens breathe, a cable drifts, the floor glow pulses, and the hall returns to the photograph."
+      action: >
+        Live-action, cinematic, a static wide shot holds the position and framing
+        established by Picture 1: the empty operations hall, the two desk rows,
+        the monitor walls, the ceiling grid and the white mark above the word
+        "NOVACORE" stay exactly where they are. The wall diagrams scroll a few
+        lines, monitor glow brightens and eases, one ceiling cable sways once,
+        and the cyan reflection on the floor tiles pulses. The chairs hold still.
+        The word "NOVACORE" stays sharp and correctly lettered. The shot ends on
+        the same still.
+      sound: >
+        A low room hum, soft fan wash, and faint electronic ticks from the monitors.
+    objects:
+      - id: mark
+        label: Wake the mark
+        hint: The far wall is the core
+        at: [0.50, 0.30]
+        select:
+          positive: [[0.50, 0.33], [0.50, 0.42]]
+          negative: [[0.50, 0.62], [0.18, 0.40]]
+        film:
+          frames: 192
+          idea: "The geometric mark flares, the word holds, light runs down the aisle, and the hall settles."
+          action: >
+            Live-action, cinematic, a static wide shot holds the position and framing established by Picture 1 as the mark on the far wall flares, the word "NOVACORE" holding under it, and a clean cyan wash travels down the centre floor reflection before fading, while the desks, chairs and wall screens stay in place and the letters "NOVACORE" stay the same sharp word, ending on the same still.
+          sound: >
+            A single low tone rises with the mark, then the room hum returns.
+      - id: left-wall
+        label: Read the left wall
+        hint: Diagrams on the port screens
+        at: [0.16, 0.38]
+        select:
+          positive: [[0.12, 0.36], [0.18, 0.48]]
+          negative: [[0.50, 0.36], [0.30, 0.70]]
+        film:
+          frames: 175
+          idea: "The left monitor bank scrolls its diagrams, then freezes back into the photograph."
+          action: >
+            Live-action, cinematic, a static wide shot holds the position and framing established by Picture 1 as the left wall of tall screens scrolls its cyan and magenta diagrams, while the right wall, the desks, the chairs and the mark above the word "NOVACORE" stay still and the diagrams stay abstract circuit traces, ending on the same still.
+          sound: >
+            Soft relay clicks and a thin high tick from the left wall, under the room hum.
+      - id: right-wall
+        label: Read the right wall
+        hint: Diagrams on the starboard screens
+        at: [0.84, 0.38]
+        select:
+          positive: [[0.86, 0.36], [0.80, 0.50]]
+          negative: [[0.50, 0.36], [0.70, 0.72]]
+        film:
+          frames: 175
+          idea: "The right monitor bank answers the left, then the photograph returns."
+          action: >
+            Live-action, cinematic, a static wide shot holds the position and framing established by Picture 1 as the right wall of tall screens scrolls its diagrams a short distance with magenta edges flaring once, while the left wall, the aisle and the mark above the word "NOVACORE" stay still and the diagrams stay abstract circuit traces, ending on the same still.
+          sound: >
+            A matching thin tick from the right wall, then the room hum.
+      - id: aisle
+        label: Walk the aisle
+        hint: The floor glow is the path
+        at: [0.50, 0.72]
+        select:
+          positive: [[0.50, 0.68], [0.50, 0.82]]
+          negative: [[0.28, 0.74], [0.72, 0.74], [0.50, 0.34]]
+        film:
+          frames: 209
+          idea: "The floor reflection travels toward the mark and settles back into the tiles."
+          action: >
+            Live-action, cinematic, a static wide shot holds the position and framing
+            established by Picture 1: the cyan reflection on the centre floor tiles
+            brightens and travels a short way toward the mark on the far wall, then
+            eases back to the photograph. Desks, chairs, screens and the word
+            "NOVACORE" hold their places. The aisle stays empty. The shot ends on
+            the same still.
+          sound: >
+            A soft sub pulse under the room hum, like a distant footfall on tile.

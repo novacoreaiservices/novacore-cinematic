@@ -1,44 +1,38 @@
-# Novacore — Cinematic Website Preview
+# Novacore — The Hall
 
-A cinematic landing-page preview for **Novacore AI**, built from the control-room
-key art (`assets/img/control-room.jpg`). This repo is the daily-build playground:
-small features land here every day.
+Cinematic preview of the first Sogni World place. The still is the operations hall photograph. Click the mark, either monitor wall, or the aisle.
 
-**Live preview:** https://novacoreaiservices.github.io/novacore-cinematic/
 **Repo:** https://github.com/novacoreaiservices/novacore-cinematic
+**Pages:** https://novacoreaiservices.github.io/novacore-cinematic/
 
-## What's in v0.1
+## What is locked
 
-- Full-viewport cinematic hero: slow Ken Burns drift on the key art, film grain,
-  vignette, letterbox bars that roll away on load
-- Glowing NOVACORE wordmark with pulse, mouse parallax on the hero
-- Fleet section (workers #462 / #463), animated stat counters, scroll reveals
-- Zero dependencies beyond Google Fonts — plain HTML/CSS/JS
+- Place id `hall`, from `01-hall.jpg`. The id cannot change.
+- Canonical still: `assets/img/hall.jpg` (copy of `worlds/novacore/stills/hall.jpg`). Do not crop, upscale, or replace it.
+- Plan: `world/world.yaml`. Lint is clean of errors. Three click-word warnings remain; they do not block select.
+- One place only. Every click is a moment that starts and ends on this still. A crossing needs a second photograph.
 
-## Preview locally
+## Billing
 
-```bash
-cd novacore-cinematic
-python3 -m http.server 8080
-# open http://localhost:8080
-```
-
-## Structure
+Renders, when approved, pay in SOGNI tokens and prefer worker NFTs 462 and 463.
 
 ```
-index.html              page markup
-assets/css/style.css    all styling (cinematic theme tokens in :root)
-assets/js/main.js       letterbox, reveals, counters, parallax
-assets/img/             key art
-ROADMAP.md              the daily feature backlog
+SOGNI_TOKEN_TYPE=sogni
+SOGNI_BILLING_MODE=tokens
 ```
 
-## Daily build workflow
+Preferred workers: `462,463`.
 
-1. Pick the next item in `ROADMAP.md`
-2. Build it on a branch (`feature/<name>`)
-3. Open a PR, merge to `main` — GitHub Pages redeploys automatically
+## Not spent yet
 
-Brand tokens (keep the mark constant): cyan `#35f0ff`, magenta `#ff3df0`,
-background `#04070d`. The NOVACORE wordmark never changes hue — see `:root`
-in `style.css`.
+No API key is on this machine, so nothing has been quoted or rendered. Next command after the key and your OK on the plan:
+
+```
+node world select novacore
+node world quote novacore
+node world render novacore --canary
+```
+
+## Daily build
+
+Pick the next open item in `ROADMAP.md`. Keep the still sacred. New places arrive as new photographs, named in story order.
