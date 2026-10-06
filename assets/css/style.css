@@ -25,7 +25,7 @@ body.ready .bar-bottom { transform: translateY(100%); }
   display: grid; place-items: center;
   background: #000;
 }
-.still img {
+.still img, .still video {
   width: min(100vw, 100vh); height: min(100vw, 100vh);
   object-fit: cover;
   animation: drift 28s ease-in-out infinite alternate;
